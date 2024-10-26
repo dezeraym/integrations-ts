@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@restackio/ai':
-        specifier: ^0.0.75
-        version: 0.0.75
+        specifier: ^0.0.77
+        version: 0.0.77
     devDependencies:
       nodemon:
         specifier: ^2.0.22
@@ -335,6 +335,10 @@ packages:
 
   '@restackio/ai@0.0.75':
     resolution: {integrity: sha512-Q3IKIJHseWM+CDoZWvgPmuv15ryZkHsCY2jq6FbdnW44MMjOOcI3QUbpZJPHLGlLZ5ucnSbQxiZBvHDDnOZfVQ==}
+    engines: {node: '>=20'}
+
+  '@restackio/ai@0.0.77':
+    resolution: {integrity: sha512-Cm3wg/8LJGBdFFFFmQCeETZh2pxUoXmr/+DjrxKqIeD9gfKwPKqho/l3SEdOMyNK0gz/yOgNLttr2bqMHZfuVg==}
     engines: {node: '>=20'}
 
   '@slack/logger@4.0.0':
@@ -1780,6 +1784,18 @@ snapshots:
   '@protobufjs/utf8@1.1.0': {}
 
   '@restackio/ai@0.0.75':
+    dependencies:
+      '@temporalio/activity': 1.11.2
+      '@temporalio/client': 1.11.2
+      '@temporalio/worker': 1.11.2
+      '@temporalio/workflow': 1.11.2
+    transitivePeerDependencies:
+      - '@swc/helpers'
+      - esbuild
+      - uglify-js
+      - webpack-cli
+
+  '@restackio/ai@0.0.77':
     dependencies:
       '@temporalio/activity': 1.11.2
       '@temporalio/client': 1.11.2

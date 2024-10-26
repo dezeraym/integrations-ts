@@ -1,6 +1,6 @@
 {
   "name": "@restackio/integrations-openai",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "main": "dist/service.js",
   "types": "dist/service.d.ts",
   "scripts": {

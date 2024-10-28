@@ -4,7 +4,7 @@ import { ListScheduledEventsParams } from '../types'; // Import the defined type
 // Function to list scheduled events
 export async function listScheduledEvents(params: ListScheduledEventsParams) {
     // Prepare the request URL
-    const url = '/scheduled_events';
+    const url = 'https://api.calendly.com/scheduled_events';
 
     // Validate the count parameter
     if (params.count && (params.count < 1 || params.count > 100)) {
@@ -27,9 +27,9 @@ export async function listScheduledEvents(params: ListScheduledEventsParams) {
 
     try {
         const response = await calendlyClient().get(`${url}?${queryParams.toString()}`);
-        return response.data; // Return the list of scheduled events
+        return response.data; 
     } catch (error) {
         console.error('Error fetching scheduled events:', error.message);
-        throw error; // Re-throw the error for further handling
+        throw error; 
     }
 }

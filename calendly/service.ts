@@ -3,7 +3,6 @@ import { rpmToSecond } from "@restackio/ai/utils"; // Utility for rate limiting
 import { listScheduledEvents, createEventType } from "./functions"; // Import your specific functions
 import { calendlyTaskQueue } from "./taskQueue"; // Task queue for Calendly
 
-// rate limit for Calendly API (adjust as necessary)
 
 export async function calendlyService({
   client,
@@ -27,3 +26,5 @@ export async function calendlyService({
 calendlyService({ client: new Restack() }).catch((err) => {
   console.error("Error in main:", err);
 });
+
+

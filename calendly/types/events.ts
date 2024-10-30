@@ -1,5 +1,3 @@
-// types/events.ts
-
 export interface ListScheduledEventsParams {
     count?: number;                   // The number of rows to return (1 to 100)
     group?: string;                   // URI of the group

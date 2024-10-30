@@ -1,20 +1,15 @@
-// type/eventType.ts
-
-// Define the location type
 export interface Location {
     kind: string;                // Type of location (e.g., 'custom', 'physical')
     location?: string;           // Custom location details
     additional_info?: string;    // Any additional information
 }
 
-// Define the date setting type
 export interface DateSetting {
     type: 'date_range';          // Allowed value must be 'date_range'
     start_date: string;          // Start date in YYYY-MM-DD format
     end_date: string;            // End date in YYYY-MM-DD format
 }
 
-// Define the event type creation parameters
 export interface EventTypeData {
     name: string;                // Event type name (<= 55 characters)
     host: string;                // Host user URI

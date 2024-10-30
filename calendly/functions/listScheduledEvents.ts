@@ -1,17 +1,9 @@
 import { calendlyClient } from '../utils'; 
-import { ListScheduledEventsParams } from '../types'; // Import the defined types
+import { ListScheduledEventsParams } from '../types';
 
-// Function to list scheduled events
 export async function listScheduledEvents(params: ListScheduledEventsParams) {
-    // Prepare the request URL
-    const url = 'https://api.calendly.com/scheduled_events';
 
-    // Validate the count parameter
-    if (params.count && (params.count < 1 || params.count > 100)) {
-        throw new Error("Count must be between 1 and 100.");
-    }
-
-    // Build query parameters
+    const url = '/scheduled_events';
     const queryParams = new URLSearchParams();
 
     if (params.count) queryParams.append('count', params.count.toString());
